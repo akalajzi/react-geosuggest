@@ -70,6 +70,7 @@ class Input extends React.Component {
       value={this.props.value}
       onKeyDown={this.onInputKeyDown.bind(this)}
       onChange={this.onChange.bind(this)}
+      onBeforeSubmit={this.props.onBeforeSubmit.bind(this)}
       onFocus={this.props.onFocus.bind(this)}
       onBlur={this.props.onBlur.bind(this)} />;
   }
@@ -85,6 +86,7 @@ Input.defaultProps = {
   onChange: () => {},
   onFocus: () => {},
   onBlur: () => {},
+  onBeforeSubmit: (val) => {return val;},
   onNext: () => {},
   onPrev: () => {},
   onSelect: () => {},

@@ -251,7 +251,7 @@ class Geosuggest extends React.Component {
   selectSuggest(suggest) {
     if (!suggest) {
       suggest = {
-        label: this.state.userInput
+        label: this.props.onBeforeSubmit(this.state.userInput)
       };
     }
 
